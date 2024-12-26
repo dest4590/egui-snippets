@@ -1,22 +1,25 @@
 {
-  "name": "egui-snippets",
-  "icon": "icon.png",
-  "displayName": "egui snippets",
-  "description": "egui snippets for vscode",
-  "version": "0.0.2",
-  "publisher": "dest4590",
-  "engines": {
-    "vscode": "^1.94.0"
-  },
-  "categories": [
-    "Snippets"
-  ],
-  "contributes": {
-    "snippets": [
-      {
-        "language": "rust",
-        "path": "./snippets/snippets.code-snippets"
-      }
-    ]
-  }
+    "name": "egui-snippets",
+    "icon": "icon.png",
+    "displayName": "egui snippets",
+    "description": "egui snippets for vscode",
+    "version": "0.0.2",
+    "publisher": "dest4590",
+    "repository": {
+        "url": "https://github.com/dest4590/egui-snippets"
+    },
+    "engines": {
+        "vscode": "^1.94.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "rust",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
 }
