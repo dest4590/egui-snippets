@@ -1,0 +1,81 @@
+{
+    "Egui Label": {
+        "prefix": "label",
+        "body": ["ui.label(\"${1:Label Text}\");"],
+        "description": "Create a simple Egui label"
+    },
+    "Egui Button with Action": {
+        "prefix": "button",
+        "body": [
+            "if ui.button(\"${1:Button Text}\").clicked() {",
+            "  ${2:// Action to perform on click}",
+            "}"
+        ],
+        "description": "Create an Egui button with a click action"
+    },
+    "Egui Text Edit (Singleline)": {
+        "prefix": "text-single",
+        "body": ["ui.text_edit_singleline(&mut ${1:my_string});"],
+        "description": "Create an Egui single-line text edit"
+    },
+    "Egui Text Edit (Multiline)": {
+        "prefix": "text-multi",
+        "body": [
+            "egui::ScrollArea::vertical().show(ui, |ui| {",
+            "  ui.text_edit_multiline(&mut ${1:my_string});",
+            "});"
+        ],
+        "description": "Create an Egui multi-line text edit with scroll area"
+    },
+    "Egui Checkbox": {
+        "prefix": "checkbox",
+        "body": ["ui.checkbox(&mut ${1:my_bool}, \"${2:Checkbox Label}\");"],
+        "description": "Create an Egui checkbox"
+    },
+    "Egui Radio Button": {
+        "prefix": "radio",
+        "body": [
+            "ui.radio_value(&mut ${1:my_enum_value}, ${2:MyEnum::Variant}, \"${3:Radio Label}\");"
+        ],
+        "description": "Create an Egui radio button"
+    },
+    "Egui Vertical Layout": {
+        "prefix": "vlayout",
+        "body": [
+            "ui.vertical(|ui| {",
+            "  ${1:// Add vertical UI elements here}",
+            "});"
+        ],
+        "description": "Create an Egui vertical layout"
+    },
+    "Egui Horizontal Layout": {
+        "prefix": "hlayout",
+        "body": [
+            "ui.horizontal(|ui| {",
+            "  ${1:// Add horizontal UI elements here}",
+            "});"
+        ],
+        "description": "Create an Egui horizontal layout"
+    },
+    "Egui Add Space": {
+        "prefix": "space",
+        "body": ["ui.add_space(${1:10.0});"],
+        "description": "Add spacing in the Egui layout"
+    },
+    "Egui Collapsing Header": {
+        "prefix": "collapse",
+        "body": [
+            "egui::CollapsingHeader::new(\"${1:Header Title}\").show(ui, |ui| {",
+            "  ${2:// Content of the collapsing header}",
+            "});"
+        ],
+        "description": "Create an Egui collapsing header"
+    },
+    "Egui Color Edit Button SRgba": {
+        "prefix": "color-srgb",
+        "body": [
+            "egui::color_picker::color_edit_button_srgb(ui, &mut ${1:my_color});"
+        ],
+        "description": "Create an Egui color edit button (sRGB)"
+    }
+}
